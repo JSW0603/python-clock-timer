@@ -61,8 +61,76 @@ mark.color("#FFD700")
 #mark 1
 mark.penup()
 mark.hideturtle()
-mark.goto()
+mark.goto(140, 215)
 mark.write("I", align="center", font=("Time", 30, "bold"))
+
+#mark 2
+mark.penup()
+mark.hideturtle()
+mark.goto(235, 120)
+mark.write("II", align="center", font=("Time", 30, "bold"))
+
+#mark 3
+mark.penup()
+mark.hideturtle()
+mark.goto(270, -25)
+mark.write("III", align="center", font=("Time", 30, "bold"))
+
+#mark 4
+mark.penup()
+mark.hideturtle()
+mark.goto(235, -150)
+mark.write("IV", align="center", font=("Time", 30, "bold"))
+
+#mark 5
+mark.penup()
+mark.hideturtle()
+mark.goto(135, -245)
+mark.write("V", align="center", font=("Time", 30, "bold"))
+
+#mark 6
+mark.penup()
+mark.hideturtle()
+mark.goto(0, -280)
+mark.write("VI", align="center", font=("Time", 30, "bold"))
+
+#mark 7
+mark.penup()
+mark.hideturtle()
+mark.goto(-135, -245)
+mark.write("VII", align="center", font=("Time", 30, "bold"))
+
+#mark 8
+mark.penup()
+mark.hideturtle()
+mark.goto(-225, -150)
+mark.write("VIII", align="center", font=("Time", 30, "bold"))
+
+#mark 9
+mark.penup()
+mark.hideturtle()
+mark.goto(-265, -25)
+mark.write("IX", align="center", font=("Time", 30, "bold"))
+
+#mark 10
+mark.penup()
+mark.hideturtle()
+mark.goto(-235, 110)
+mark.write("X", align="center", font=("Time", 30, "bold"))
+
+#mark 11
+mark.penup()
+mark.hideturtle()
+mark.goto(-135, 215)
+mark.write("XI", align="center", font=("Time", 30, "bold"))
+
+#mark 12
+mark.penup()
+mark.hideturtle()
+mark.goto(0, 250)
+mark.write("XII", align="center", font=("Time", 30, "bold"))
+
+#functions to move hands
 
 
 turtle.done()
