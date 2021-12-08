@@ -1,3 +1,4 @@
+import datetime
 import turtle
 
 #configure window for Analog clock
@@ -131,6 +132,30 @@ mark.goto(0, 250)
 mark.write("XII", align="center", font=("Time", 30, "bold"))
 
 #functions to move hands
+def hourhand():
+    currenthour = datetime.datetime.now().hour
+    degree = (currenthour - 15) * -30
+    currentminute = datetime.datetime.now().minute
+    degree = degree + -0.5 * currentminute
+    h_hand.setheading(degree)
+    window.ontimer(hourhand, 60000)
 
+def minutehand():
+    currentminute = datetime.datetime.now().minute
+    degree = (currentminute - 15) * -6
+    currentsecond = datetime.datetime.now().second
+    degree = degree + (-currentsecond * 0.1)
+    m_hand.setheading(degree)
+    window.ontimer(minutehand, 1000)
 
-turtle.done()
+def secondhand():
+    currentsecond = datetime.datetime.now().second
+    degree = (currentsecond - 15) * -6
+    s_hand.setheading(degree)
+    window.ontimer(secondhand, 1000)
+
+window.ontimer(hourhand, 1)
+window.ontimer(minutehand, 1)
+window.ontimer(secondhand, 1)
+window.exitonclick()
+
