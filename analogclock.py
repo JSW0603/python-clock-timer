@@ -51,85 +51,68 @@ s_hand.color("#c8c8c8")
 #create center circle
 c_circle = turtle.Turtle()
 c_circle.shape("circle")
-c_circle.color("#c8c8c8")
 c_circle.shapesize(1.3, 1.3)
+c_circle.color("#c8c8c8")
 
 #marking numbers
 mark = turtle.Turtle()
 mark.speed(0)
 mark.color("#FFD700")
 
+def mark_nums(hand_num, position1, position2):
+    mark.penup()
+    mark.hideturtle()
+    mark.goto(position1, position2)
+    mark.write(f"{hand_num}", align="center", font=("Time", 30, "bold"))
+
 #mark 1
-mark.penup()
-mark.hideturtle()
-mark.goto(140, 215)
-mark.write("I", align="center", font=("Time", 30, "bold"))
+mark_nums("I", 140, 215)
 
 #mark 2
-mark.penup()
-mark.hideturtle()
-mark.goto(235, 120)
-mark.write("II", align="center", font=("Time", 30, "bold"))
+mark_nums("II", 235, 120)
 
 #mark 3
-mark.penup()
-mark.hideturtle()
-mark.goto(270, -25)
-mark.write("III", align="center", font=("Time", 30, "bold"))
+mark_nums("III", 270, -25)
 
 #mark 4
-mark.penup()
-mark.hideturtle()
-mark.goto(235, -150)
-mark.write("IV", align="center", font=("Time", 30, "bold"))
+mark_nums("IV", 235, -150)
 
 #mark 5
-mark.penup()
-mark.hideturtle()
-mark.goto(135, -245)
-mark.write("V", align="center", font=("Time", 30, "bold"))
+mark_nums("V", 135, -245)
 
 #mark 6
-mark.penup()
-mark.hideturtle()
-mark.goto(0, -280)
-mark.write("VI", align="center", font=("Time", 30, "bold"))
+mark_nums("VI", 0, -280)
 
 #mark 7
-mark.penup()
-mark.hideturtle()
-mark.goto(-135, -245)
-mark.write("VII", align="center", font=("Time", 30, "bold"))
+mark_nums("VII", -135, -245)
 
 #mark 8
-mark.penup()
-mark.hideturtle()
-mark.goto(-225, -150)
-mark.write("VIII", align="center", font=("Time", 30, "bold"))
+mark_nums("VIII", -225, -150)
 
 #mark 9
-mark.penup()
-mark.hideturtle()
-mark.goto(-265, -25)
-mark.write("IX", align="center", font=("Time", 30, "bold"))
+mark_nums("IX", -265, -25)
 
 #mark 10
-mark.penup()
-mark.hideturtle()
-mark.goto(-235, 110)
-mark.write("X", align="center", font=("Time", 30, "bold"))
+mark_nums("X", -235, 110)
 
 #mark 11
-mark.penup()
-mark.hideturtle()
-mark.goto(-135, 215)
-mark.write("XI", align="center", font=("Time", 30, "bold"))
+mark_nums("XI", -135, 215)
 
 #mark 12
-mark.penup()
-mark.hideturtle()
-mark.goto(0, 250)
-mark.write("XII", align="center", font=("Time", 30, "bold"))
+mark_nums("XII", 0, 250)
+
+#draw a circle for calender
+t.penup()
+t.speed(0)
+t.pensize(2)
+t.hideturtle()
+t.goto(0, -230)
+t.pendown()
+t.pencolor("#FFAF0A")
+t.begin_fill()
+t.circle(100, 360)
+t.end_fill()
+
 
 #functions to move hands
 def hourhand():
